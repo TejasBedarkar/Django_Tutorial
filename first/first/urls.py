@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# change the name of administration panel
+admin.site.site_header = "Techjar Admin"
+admin.site.site_title = "Techjar Admin Portal"
+admin.site.index_title = "Welcome to Techjar Portal"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),   #agr koi url home app ke andar hai to usko include karna padega
