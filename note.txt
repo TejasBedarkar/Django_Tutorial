@@ -1,0 +1,48 @@
+Djangi is free and open source web apploication framework 
+
+it offers a big collection of modules whiich you can use in your own projects
+
+primarily frameworks exist to save developers a lot of wasted time and headaches and django is no different
+
+MVT(Model view template)
+    software design pattern
+    view= execute the business logic and interact witha model to carry data and renders a template 
+    there is no seperate controller and complete application is based on mvt. 
+
+    model : info to create db  \\kaha pr data store hoga us model ki information  \\ Data define karta hai \\  Database structure handle karta hai
+    view : jo dikhta hai // pull info from database -> process data -> sends to template
+    template : User ko visible UI
+
+
+makemigrations:
+migrate:
+
+python manage.py sqlmigrate home 0001
+
+createsuperuser: 
+
+
+##ADD DATA##
+shell: Python interpreter (Python shell) to add some members to it.
+python manage.py shell
+
+    from members.models import Member   #  imports 
+
+    Member.objects.all()     #it provides all data in <QuerySet []>
+
+    member = Member(firstname='Emil', lastname='Refsnes')   #this helps to add data in this 
+    member.save()                                           # helps to save data
+
+    Member.objects.all().values()                           #see the table
+
+
+
+##UPDATE DATA##
+
+>>> x.firstname = "Stalikken"
+>>> x.save()
+
+Member.objects.all().values()    #to see all records 
+
+##DELETE RECORDS##
+ 
