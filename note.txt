@@ -45,4 +45,21 @@ python manage.py shell
 Member.objects.all().values()    #to see all records 
 
 ##DELETE RECORDS##
- 
+ >>> x = Member.objects.all()[5]
+ >>> x.firstname
+ >>> x.delete()
+ O/P: (1, {'members.Member': 1})  # 1 record deleteed from table
+
+
+
+###UPDATE MODEL###
+
+isme apn models.py mai jake tables edit kr sakte hai  measn aadd columns, delee columns and many more vo bhi simple chnage the code only
+
+after it run: 
+python manage.py makemigrations members 
+
+as an output will get 2 options
+
+after selecting an option run: 
+python manage.py migrate

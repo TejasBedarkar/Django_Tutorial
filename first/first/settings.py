@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'home'
 ]
 
+# use this too add backend for authentication, otherwise it will give error when we use login and logout functions
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',   
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

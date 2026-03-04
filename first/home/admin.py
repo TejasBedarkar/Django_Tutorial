@@ -5,7 +5,7 @@ from .models import Home
 
 # admin.site.register(Home)
 
-# Register your models here.
+#so show 
 class HomeAdmin(admin.ModelAdmin):
   list_display = ("firstname", "lastname", "joined_date",)
   
